@@ -1,4 +1,5 @@
-[{
+{
+  "tire_details": [{
     "tire_brand": "Michaelson",
     "tire_price": 75
   },
@@ -7,7 +8,8 @@
       "tire_price": 62
     },
     {
-      "tire_brand": "CG_Stoodrich",
+      "tire_brand": "CG Stoodrich",
       "tire_price": 80
     }
   ]
+}

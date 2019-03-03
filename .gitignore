@@ -1,0 +1,4 @@
+.gradle
+.idea
+TurboTires-SPA/node_modules
+TurboTires-SPA/src/dist

@@ -7,11 +7,16 @@ buildscript {
     }
 }
 plugins {
+//    id 'java'
     id 'net.ltgt.apt' version '0.10'
 }
 
-group 'jetbrains'
-version '1.0-SNAPSHOT'
+repositories {
+    mavenCentral()
+}
+
+group 'com.ford'
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -21,10 +26,25 @@ apply plugin: 'io.spring.dependency-management'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile("junit:junit")
+
+    testCompile 'javax.json:javax.json-api:1.0'
+
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("org.springframework:spring-web")
+    compile("com.fasterxml.jackson.core:jackson-databind")
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.1.2'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.2'
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.8.0'
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.8.0'
+    compile("org.springframework.security:spring-security-web")
+    compile("org.springframework.security:spring-security-config")
 }

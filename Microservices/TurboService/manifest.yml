@@ -1,5 +1,0 @@
-applications:
-- name: CoreService
-  health-check-cluster: process
-  memory: 768M
-  port: 8090
